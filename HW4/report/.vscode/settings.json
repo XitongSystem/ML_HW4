@@ -1,0 +1,35 @@
+{
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "latexmk",
+            "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+              "pdflatex",
+              "bibtex",
+              "pdflatex",
+              "pdflatex"
+            ]
+        }
+      ],
+    "window.zoomLevel": 1,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.pythonPath": "/anaconda/envs/py27/bin/python",
+    "editor.wordWrap": "on"
+}

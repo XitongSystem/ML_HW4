@@ -1,0 +1,62 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{CSE 847 (Spring 2019): Machine Learning— Homework 4} % Title of the assignment
+\author{Xitong Zhang\\ \texttt{zhangxit@msu.edu}} 
+\date{}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle % Print the title
+\section{Logistic Regression} 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ll}
+	\multicolumn{1}{c}{samples \#} & \multicolumn{1}{c}{accuracy} \\
+	\hline
+	200 & 0.89927    \\  
+	500 & 0.9158     \\ 
+	800 & 0.91657 	 \\
+	1000 & 0.91657   \\
+	1500 & 0.91888   \\   
+	2000 & 0.9258    
+	\end{tabular}
+	\caption{training samples number and accuracy}
+\end{table}
+
+\section{Sparse Logistic Regression} 
+\begin{figure*}
+	\includegraphics[width = \linewidth]{../aucs.jpg}
+	\caption{AUC with different alpha}
+\end{figure*}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{lll}
+	\multicolumn{1}{c}{\# of selected features} & \multicolumn{1}{c}{AUC} 
+	& \multicolumn{1}{c}{alpha}\\
+	\hline
+	116& 0.63684&0\\
+	106& 0.62967&0.01\\
+	14& 0.69952&0.1\\
+	5& 0.67943&0.2\\
+	3& 0.64498&0.3\\
+	2& 0.62297&0.4\\
+	1& 0.62201&0.5\\
+	1& 0.62201&0.6\\
+	1& 0.62201&0.7\\
+	1& 0.62201&0.8\\
+	1& 0.62201&0.9\\
+	0& 0.5  &1\\ 
+	\end{tabular}
+	\caption{\# of selected features number and AUC}
+\end{table}
+\end{document}
