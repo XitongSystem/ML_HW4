@@ -38,7 +38,7 @@ for i = 1:maxiter
             update = -10;
         end
         % update
-        weights = weights + y*x'*epsilon./(1+exp(y*update));
+        weights = weights + y*x'*epsilon./(1+exp(y*update))./size(data, 1);
     end
 end
 

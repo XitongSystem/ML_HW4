@@ -19,7 +19,7 @@ for i = 1:size(split,2)
     train_Y = Y(1:split(i),:);
     
     % Train
-    weight = logistic_train(train_X, train_Y);
+    weight = logistic_train(train_X, train_Y, 1e-3);
     
     % Test
     logit = -test_X*weight;
@@ -45,7 +45,7 @@ for i = 1:size(par,2)
     logit(logit < -10) = -10;
     predict_y = 1.0./(1.0+exp(logit));
     
-    [X,Y,T,AUC] = perfcurve(y_test,predict_y, 1);
+    [X,Y,T,AUC] = perfcurve(y_test, predict_y, 1);
     subplot(4,3,i);
     plot(X,Y);
     xlabel('False positive rate'); 
