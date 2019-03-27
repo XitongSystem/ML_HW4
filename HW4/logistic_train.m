@@ -34,8 +34,8 @@ for i = 1:maxiter
         update = x*weights;
         if update > 10
             update = 10;
-        elseif update < -10
-            update = -10;
+        %elseif update < -10
+        %    update = -10;
         end
         % update
         weights = weights + y*x'*epsilon./(1+exp(y*update))./size(data, 1);

@@ -19,12 +19,12 @@ for i = 1:size(split,2)
     train_Y = Y(1:split(i),:);
     
     % Train
-    weight = logistic_train(train_X, train_Y, 1e-3);
+    weight = logistic_train(train_X, train_Y);
     
     % Test
     logit = -test_X*weight;
     logit(logit > 10) = 10;
-    logit(logit < -10) = -10;
+    %logit(logit < -10) = -10;
     predict_y = 1.0./(1.0+exp(logit));
     predict_y(predict_y > 0.5) = 1;
     predict_y(predict_y < 1) = -1;
